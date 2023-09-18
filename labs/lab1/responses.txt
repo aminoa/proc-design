@@ -1,0 +1,5 @@
+Responses to Lab 1 Questions:
+
+1) They are relative to the current source directory (location of CMakeLists.txt)
+2) Ninja acts as a builder whereas CMake does the building for a number of different build systems, including Ninja and Make
+3) To not clutter your other directories
