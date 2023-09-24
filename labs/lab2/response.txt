@@ -1,0 +1,5 @@
+Make Note: In the next lab you’ll learn more about verification testing, but for now take a quick glance at dv/exercise1.cpp, dv/exercise2.cpp, and dv/exercise3.cpp. Exercise1 exhaustively tests all possible inputs, Exercise2 samples some possible initial values for a hundred cycles, and Exercise3 randomly tests inputs for a hundred cycles.
+
+Why do you think the reason for these different testing approaches are? What are their advantages and disadvantages?
+
+An advantage of the more exhaustive testing is that you can be much more confident on the correctness of the approach taken. However, this may tests many scenarios that likely won't come into play. This is where the more selective testing can come in handy, whether that be picking specific initial values or randomly testing.
