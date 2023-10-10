@@ -26,8 +26,10 @@ void test(u16 initial)
 
 int main()
 {
-  for (int i = 0; i < 100; ++i)
+  // generate random number from  0 to 65535
+  for (int i = 0; i < 1000; ++i)
   {
-    test(i);
+    test(rand() % 65536);
   }
+
 }

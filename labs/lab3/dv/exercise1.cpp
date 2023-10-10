@@ -34,7 +34,7 @@ TEST_CASE("Opcode 1, Left Shift") {
 }
 
 TEST_CASE("Opcode 2, Modulo") {
-  test_op(2, [](u8 a, u8 b) -> u8 { return a % b; });
+  test_op(2, [](u8 a, u8 b) -> u8 { return (b == 0) ? 0 : a % b; });
 }
 
 TEST_CASE("Opcode 3, Not And") {
