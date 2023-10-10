@@ -20,6 +20,13 @@ void test(u16 initial)
     model.eval();
     model.clk = 1;
     model.eval();
+
+    if (model.out != lsfr(initial))
+    {
+      FAIL("Output is not correct");
+      // return 1;
+    }
+
     initial = lsfr(initial);
   }
 }
