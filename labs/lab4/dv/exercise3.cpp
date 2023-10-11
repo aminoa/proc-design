@@ -1,5 +1,8 @@
 #include <VExercise3.h>
 #include <cstdint>
+#include <bit>
+#include <bitset>
+#include <iostream>
 #include <catch2/catch_test_macros.hpp>
 #include <random>
 
@@ -17,6 +20,15 @@ u8 mystery1(int a, int b, int c)
   }
 }
 
+int count_set_bits(u16 n) {
+    int count = 0;
+    while (n) {
+        count += n & 1;
+        n >>= 1;
+    }
+    return count;
+}
+
 struct Mystery2
 {
   u8 i = 0;
@@ -31,7 +43,8 @@ struct Mystery2
     case 1: out = ((out & 0xFF00)) | b_in;
     case 2: out = (out << 8) | (out >> 8);
     case 3: out = ((out >> 12) & 0xF) << 12 | ((out >> 8) & 0xF) << 8 | ((out >> 4) & 0xF) << 4 | (out & 0xF); 
-    case 4: out = (std::popcount(out) & 1);
+    case 4: out = (count_set_bits(out) & 1);
+
     }
     return 0;
   }
